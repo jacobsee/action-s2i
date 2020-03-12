@@ -1,9 +1,9 @@
-FROM alpine:latest
+FROM docker:19.03.2
 
 LABEL version="1.0.0"
-LABEL repository="http://github.com/vrutkovs/action-s2i"
-LABEL homepage="http://github.com/vrutkovs/action-s2i"
-LABEL maintainer="Vadim Rutkovsky"
+LABEL repository="http://github.com/jacobsee/action-s2i"
+LABEL homepage="http://github.com/jacobsee/action-s2i"
+LABEL maintainer="Jacob See"
 LABEL "com.github.actions.name"="Source2Image build"
 LABEL "com.github.actions.description"="Runs source2image build"
 LABEL "com.github.actions.icon"="package"
