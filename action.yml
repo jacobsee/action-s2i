@@ -14,11 +14,14 @@ inputs:
   image:
     description: 'resulting image'
     required: true
+  image_pull_registry:
+    description: 'the registry containing the builder image'
+    required: true
   image_pull_username:
-    description: "the username to use for pulling the base image"
+    description: 'the username to use for pulling the base image'
     required: true
   image_pull_password:
-    description: "the password to use for pulling the base image"
+    description: 'the password to use for pulling the base image'
     required: true
 runs:
   using: 'docker'
@@ -29,3 +32,4 @@ runs:
     - ${{ inputs.image }}
     - ${{ inputs.image_pull_username }}
     - ${{ inputs.image_pull_password }}
+    - ${{ inputs.image_pull_registry }}
