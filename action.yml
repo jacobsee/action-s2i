@@ -11,8 +11,26 @@ inputs:
   base:
     description: 'source2image base image'
     required: true
-  image:
+  output_image:
     description: 'resulting image'
+    required: true
+  image_pull_registry:
+    description: 'the registry containing the builder image'
+    required: true
+  image_pull_username:
+    description: 'the username to use for pulling the base image'
+    required: true
+  image_pull_password:
+    description: 'the password to use for pulling the base image'
+    required: true
+  image_push_registry:
+    description: 'the registry to push the built image to'
+    required: true
+  image_push_username:
+    description: 'the username to use for pushing the built image'
+    required: true
+  image_push_password:
+    description: 'the password to use for pushing the built image'
     required: true
 runs:
   using: 'docker'
@@ -20,4 +38,10 @@ runs:
   args:
     - ${{ inputs.path }}
     - ${{ inputs.base }}
-    - ${{ inputs.image }}
+    - ${{ inputs.output_image }}
+    - ${{ inputs.image_pull_registry }}
+    - ${{ inputs.image_pull_username }}
+    - ${{ inputs.image_pull_password }}
+    - ${{ inputs.image_push_registry }}
+    - ${{ inputs.image_push_username }}
+    - ${{ inputs.image_push_password }}
