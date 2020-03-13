@@ -9,7 +9,7 @@ image registry.
 Add the following to a step in your GitHub Workflow:
 
 ```yaml
-    - uses: jacobsee/action-s2i@master
+    - uses: jacobsee/s2i-github-action@master
       with:
         base: registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift
         output_image: quay.io/my-org/my-repo:latest
