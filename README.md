@@ -21,9 +21,9 @@ Add the following to a step in your GitHub Workflow:
         image_push_password: ${{ secrets.QUAY_PASSWORD }}
 ```
 
-If the image registry hosting your builder/base image is public, you may omit `image_pull_username`
-and `image_pull_password`. In keeping with best practice, your credentials should be stored in
-secrets and consumed as shown - not added directly to your workflow yaml.
+If the image registry hosting your builder/base image is public, you may omit `image_pull_registry`,
+`image_pull_username` and `image_pull_password`. In keeping with best practice, your credentials
+should be stored in secrets and consumed as shown - not added directly to your workflow yaml.
 
 ## Credit
 

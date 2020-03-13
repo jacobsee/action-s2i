@@ -1,6 +1,6 @@
 name: 'Source2Image'
 description: 'Create image using source2image'
-author: 'Vadim Rutkovsky'
+author: 'Jacob See'
 icon: package
 color: purple
 inputs:
@@ -16,13 +16,13 @@ inputs:
     required: true
   image_pull_registry:
     description: 'the registry containing the builder image'
-    required: true
+    required: false
   image_pull_username:
     description: 'the username to use for pulling the base image'
-    required: true
+    required: false
   image_pull_password:
     description: 'the password to use for pulling the base image'
-    required: true
+    required: false
   image_push_registry:
     description: 'the registry to push the built image to'
     required: true
