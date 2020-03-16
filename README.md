@@ -27,4 +27,4 @@ should be stored in secrets and consumed as shown - not added directly to your w
 
 ## Credit
 
-This action was forked from Vadim Rutkovsky's [action-s2i](https://github.com/vrutkovs/action-s2i).
+This action was originally based on Vadim Rutkovsky's [action-s2i](https://github.com/vrutkovs/action-s2i).
