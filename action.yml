@@ -32,6 +32,9 @@ inputs:
   image_push_password:
     description: 'the password to use for pushing the built image'
     required: true
+  image_tags:
+    description: 'comma separated list of tags for the built image'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -45,3 +48,4 @@ runs:
     - ${{ inputs.image_push_registry }}
     - ${{ inputs.image_push_username }}
     - ${{ inputs.image_push_password }}
+    - ${{ inputs.image_tags }}

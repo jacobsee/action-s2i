@@ -15,3 +15,15 @@ docker pull "$2"
 s2i build "$1" "$2" "$3"
 # Push to output registry
 docker push "$3"
+
+TAGS="$10"
+
+if [ "$TAGS" = "" ]; then
+    echo "Skipping custom tagging, using latest - tags not set."
+else 
+    for TAG in ${TAGS//,/ }
+    do
+        echo "Tagging image ${3} with ${TAG}"
+        docker tag "${3}" "${3}:${TAG}"
+    done
+fi
