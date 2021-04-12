@@ -19,6 +19,7 @@ Add the following to a step in your GitHub Workflow:
         image_push_registry: quay.io
         image_push_username: ${{ secrets.QUAY_USERNAME }}
         image_push_password: ${{ secrets.QUAY_PASSWORD }}
+        image_tags: development,${{ github.run_number }}
 ```
 
 If the image registry hosting your builder/base image is public, you may omit `image_pull_registry`,
